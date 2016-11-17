@@ -1,13 +1,11 @@
+import os
 import sys
 import time
 import telepot
 
-
-"""
-$ python3.5 skeletona.py <token>
-
-A skeleton for your async telepot programs.
-"""
+configfile="~/.config/qj/qjconf.py"
+sys.path.append(os.path.dirname(os.path.expanduser(configfile)))
+import qjconf
 
 def handle(msg):
     flavor = telepot.flavor(msg)
@@ -20,9 +18,8 @@ def handle(msg):
     bot.sendMessage(chat_id, "haha")
 
 
-TOKEN = ""
 
-bot = telepot.Bot(TOKEN)
+bot = telepot.Bot(qjconf.TOKEN)
 bot.message_loop(handle)
 print ('Listening ...')
 
