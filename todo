@@ -1,0 +1,10 @@
+do posts
+parse command
+attach bot commands to poster
+project structure
+logging
+daemon
+json escaping for inbox/post text
+save user info (limit posting frequency)
+save inbox and posts (just for fun)
+pep8 requirments
